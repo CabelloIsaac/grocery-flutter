@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'ui/screens/welcome/welcome_screen.dart';
 import 'utils/constants.dart';
 import 'utils/routes.dart';
 import 'utils/styles.dart';
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Constants.appName,
       routes: Routes.routes,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       theme: MyStyles.lightTheme,
       darkTheme: MyStyles.darkTheme,
-      home: const Text("Hello"),
+      home: const WelcomeScreen(),
     );
   }
 }
