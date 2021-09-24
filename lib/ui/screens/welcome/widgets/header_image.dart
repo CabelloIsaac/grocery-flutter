@@ -22,15 +22,12 @@ class HeaderImage extends StatelessWidget {
               color: MyColors.primary,
               borderRadius: BorderRadius.circular(15),
             ),
-            width: width - 60,
-            margin: const EdgeInsets.fromLTRB(45, 40, 45, 0),
+            width: width,
+            margin: const EdgeInsets.fromLTRB(35, 40, 35, 0),
             height: width - 100,
           ),
         ),
-        Image.asset(
-          "assets/images/woman-welcome.png",
-          width: width - 32,
-        ),
+        Image.asset("assets/images/woman-welcome.png", width: width),
       ],
     );
   }
