@@ -14,7 +14,7 @@ class MyStyles {
     ),
     appBarTheme: const AppBarTheme(
       centerTitle: true,
-      color: Colors.transparent,
+      color: Colors.white,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
       elevation: 0,
       foregroundColor: Colors.black,

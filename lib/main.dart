@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'ui/screens/welcome/welcome_screen.dart';
 import 'utils/constants.dart';
@@ -23,8 +24,16 @@ class MyApp extends StatelessWidget {
       title: Constants.appName,
       routes: Routes.routes,
       themeMode: ThemeMode.light,
-      theme: MyStyles.lightTheme,
-      darkTheme: MyStyles.darkTheme,
+      theme: MyStyles.lightTheme.copyWith(
+        textTheme: GoogleFonts.oxygenTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
+      darkTheme: MyStyles.darkTheme.copyWith(
+        textTheme: GoogleFonts.oxygenTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
       home: const WelcomeScreen(),
     );
   }

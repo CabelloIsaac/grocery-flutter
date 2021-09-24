@@ -23,7 +23,7 @@ class PrimaryButton extends StatelessWidget {
         style: TextButton.styleFrom(
           primary: Colors.white,
           backgroundColor: MyColors.primary,
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
