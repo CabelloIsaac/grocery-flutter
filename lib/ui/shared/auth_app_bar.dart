@@ -22,7 +22,8 @@ class AuthAppBar extends StatelessWidget {
           children: [
             Image.asset(
               "assets/images/auth-header.jpg",
-              height: size.height / 3,
+              height: (size.height / 3) + 50,
+              width: size.width,
               fit: BoxFit.cover,
             ),
           ],
