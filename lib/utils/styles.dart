@@ -5,7 +5,7 @@ import 'colors.dart';
 
 class MyStyles {
   static ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: MyColors.scaffoldBackgroundColor,
     primaryColorBrightness: Brightness.light,
     primaryColor: MyColors.primary,
     colorScheme: const ColorScheme.light(

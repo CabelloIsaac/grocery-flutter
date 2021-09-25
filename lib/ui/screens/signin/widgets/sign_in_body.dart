@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/ui/screens/signin/sign_in_screen.dart';
+import 'package:grocery/ui/screens/signup/sign_up_screen.dart';
 import 'package:grocery/ui/shared/auth_bottom_rich_text.dart';
 import 'package:grocery/ui/shared/auth_header_title.dart';
 import 'package:grocery/ui/shared/primary_button.dart';
 
-import 'sign_up_form.dart';
+import 'sign_in_form.dart';
 
-class SignUpBody extends StatelessWidget {
-  const SignUpBody({
+class SignInBody extends StatelessWidget {
+  const SignInBody({
     Key? key,
   }) : super(key: key);
 
@@ -19,23 +19,24 @@ class SignUpBody extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       children: [
         const AuthHeaderTitle(
-          title: "Register to SuperMarket",
-          subtitle: "Fill this form to create an account",
+          title: "Sign in to SuperMarket",
+          subtitle:
+              "Welcome back! Sign in with your previous account to continue shopping",
         ),
         const SizedBox(height: 32),
-        const SignUpForm(),
+        const SignInForm(),
         const SizedBox(height: 24),
         PrimaryButton(
-          text: "Next",
+          text: "Sign In",
           onPressed: () {},
         ),
         const SizedBox(height: 24),
         AuthBottomRichText(
           onTap: () {
-            Navigator.pushReplacementNamed(context, SignInScreen.route);
+            Navigator.pushReplacementNamed(context, SignUpScreen.route);
           },
-          text1: "Already have an account?",
-          text2: "Sign In",
+          text1: "Don't have an account?",
+          text2: "Register",
         ),
       ],
     );
