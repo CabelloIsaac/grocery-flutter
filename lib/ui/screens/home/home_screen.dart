@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/address_container.dart';
+import 'widgets/best_sellers.dart';
 import 'widgets/categories.dart';
 import 'widgets/home_banner.dart';
 
@@ -13,12 +14,15 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
-          children: const [
-            HomeBanner(),
-            SizedBox(height: 30),
-            AddressContainer(),
-            SizedBox(height: 30),
-            Categories(),
+          children: [
+            AppBar(backgroundColor: Colors.transparent, toolbarHeight: 20),
+            const HomeBanner(),
+            const SizedBox(height: 30),
+            const AddressContainer(),
+            const SizedBox(height: 30),
+            const Categories(),
+            const SizedBox(height: 30),
+            const BestSellers(),
           ],
         ),
       ),

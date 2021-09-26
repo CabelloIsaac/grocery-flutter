@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:grocery/utils/colors.dart';
+import 'package:grocery/ui/screens/home/widgets/section_title.dart';
 
 class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);
@@ -12,7 +12,10 @@ class Categories extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          const _Title(),
+          SectionTitle(
+            title: "Categories",
+            seeAllOnTap: () {},
+          ),
           const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,41 +81,6 @@ class _CategoryItem extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class _Title extends StatelessWidget {
-  const _Title({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const Text(
-          "Categories",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        GestureDetector(
-          onTap: () {},
-          child: const Text(
-            "See all",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-              color: MyColors.primary,
-              decoration: TextDecoration.underline,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
