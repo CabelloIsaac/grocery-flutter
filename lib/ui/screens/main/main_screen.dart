@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/providers/main_provider.dart';
 import 'package:grocery/ui/screens/home/home_screen.dart';
+import 'package:grocery/ui/screens/search/search_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/my_bottom_navigation_bar.dart';
@@ -12,7 +13,7 @@ class MainScreen extends StatelessWidget {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    // ProfileScreen(),
+    const SearchScreen(),
   ];
 
   @override
