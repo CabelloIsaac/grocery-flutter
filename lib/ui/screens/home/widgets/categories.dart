@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:grocery/ui/screens/home/widgets/section_title.dart';
+import 'package:grocery/ui/shared/section_title.dart';
 
 class Categories extends StatelessWidget {
   const Categories({Key? key}) : super(key: key);

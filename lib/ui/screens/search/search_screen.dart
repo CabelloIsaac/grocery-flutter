@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:grocery/utils/colors.dart';
+import 'package:grocery/ui/shared/product_item_grid.dart';
+import 'package:grocery/ui/shared/section_subtitle.dart';
+import 'package:grocery/ui/shared/section_title.dart';
+
+import 'widgets/history_items.dart';
+import 'widgets/search_bar.dart';
+import 'widgets/you_might_like.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -14,50 +19,17 @@ class SearchScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppBar(backgroundColor: Colors.transparent, toolbarHeight: 20),
-            const Text(
-              "Search",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            const SectionTitle(title: "Search"),
+            const SizedBox(height: 30),
+            const SearchBar(),
+            const SizedBox(height: 30),
+            const SectionSubtitle(title: "History"),
             const SizedBox(height: 20),
-            Material(
-              color: Colors.white,
-              borderRadius: const BorderRadius.all(
-                Radius.circular(10.0),
-              ),
-              child: InkWell(
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(10.0),
-                ),
-                onTap: () {},
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.grey.withOpacity(0.5),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(10.0),
-                    ),
-                  ),
-                  padding: const EdgeInsets.all(16),
-                  child: Row(
-                    children: const [
-                      Icon(Icons.search),
-                      SizedBox(width: 16),
-                      Text("Search Product"),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            // const AddressContainer(),
+            const HistoryItems(),
             const SizedBox(height: 30),
-            // const Categories(),
-            const SizedBox(height: 30),
-            // const BestSellers(),
+            const SectionSubtitle(title: "You might like"),
+            const SizedBox(height: 20),
+            const YouMightLike(),
           ],
         ),
       ),
