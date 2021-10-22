@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/ui/screens/products/details/product_details_screen.dart';
 import 'package:grocery/utils/functions.dart';
 import 'package:palette_generator/palette_generator.dart';
 
@@ -30,7 +31,9 @@ class _ProductItemState extends State<ProductItem> {
 
     return InkWell(
       borderRadius: BorderRadius.circular(15),
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, ProductDetailsScreen.route);
+      },
       child: Container(
         width: (width / 2) - 16,
         decoration: BoxDecoration(
