@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery/providers/main_provider.dart';
 import 'package:grocery/ui/screens/cart/cart_screen.dart';
 import 'package:grocery/ui/screens/home/home_screen.dart';
+import 'package:grocery/ui/screens/profile/profile_screen.dart';
 import 'package:grocery/ui/screens/search/search_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -16,6 +17,7 @@ class MainScreen extends StatelessWidget {
     const HomeScreen(),
     const SearchScreen(),
     const CartScreen(),
+    const ProfileScreen(),
   ];
 
   @override
