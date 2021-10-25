@@ -12,12 +12,12 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Text(
           title,
           style: const TextStyle(
-            fontSize: 30,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -30,7 +30,6 @@ class SectionTitle extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
                 color: MyColors.primary,
-                decoration: TextDecoration.underline,
               ),
             ),
           ),

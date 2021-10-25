@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SectionSubtitle extends StatelessWidget {
-  const SectionSubtitle({Key? key, required this.title}) : super(key: key);
+class ScreenTitle extends StatelessWidget {
+  const ScreenTitle({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -10,7 +10,7 @@ class SectionSubtitle extends StatelessWidget {
     return Text(
       title,
       style: const TextStyle(
-        fontSize: 20,
+        fontSize: 32,
         fontWeight: FontWeight.bold,
       ),
     );

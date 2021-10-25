@@ -14,15 +14,14 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
-          children: [
-            AppBar(backgroundColor: Colors.transparent, toolbarHeight: 20),
-            const HomeBanner(),
-            const SizedBox(height: 30),
-            const AddressContainer(),
-            const SizedBox(height: 30),
-            const Categories(),
-            const SizedBox(height: 30),
-            const BestSellers(),
+          children: const [
+            HomeBanner(),
+            SizedBox(height: 30),
+            AddressContainer(),
+            SizedBox(height: 40),
+            Categories(),
+            SizedBox(height: 30),
+            BestSellers(),
           ],
         ),
       ),

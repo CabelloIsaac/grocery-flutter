@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/ui/shared/product_item_grid.dart';
+import 'package:grocery/ui/shared/product_list_item.dart';
+// import 'package:grocery/ui/shared/product_item_grid.dart';
 
 import '../../../shared/section_title.dart';
 
@@ -12,18 +13,14 @@ class BestSellers extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         children: [
-          const SectionTitle(title: "Best Seller"),
+          const SectionTitle(title: "Best Sellers"),
           const SizedBox(height: 20),
-          GridView.builder(
+          ListView.separated(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              mainAxisExtent: 290,
-            ),
             itemCount: 4,
+            separatorBuilder: (_, __) =>
+                const Divider(color: Colors.transparent),
             itemBuilder: (BuildContext context, int index) {
               return const ProductItem();
             },

@@ -12,7 +12,6 @@ class MyBottomNavigationBar extends StatelessWidget {
     final mainProvider = Provider.of<MainProvider>(context);
     return BottomNavigationBar(
       backgroundColor: Colors.white,
-      selectedItemColor: MyColors.primary,
       unselectedItemColor: Colors.grey,
       type: BottomNavigationBarType.fixed,
       currentIndex: mainProvider.currentScreen,

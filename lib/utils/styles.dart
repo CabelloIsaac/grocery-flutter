@@ -7,11 +7,7 @@ class MyStyles {
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: MyColors.scaffoldBackgroundColor,
     primaryColorBrightness: Brightness.light,
-    primaryColor: MyColors.primary,
-    colorScheme: const ColorScheme.light(
-      primary: MyColors.primary,
-      secondary: MyColors.primary,
-    ),
+    primarySwatch: MyColors.createMaterialColor(MyColors.primary),
     appBarTheme: const AppBarTheme(
       centerTitle: true,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
